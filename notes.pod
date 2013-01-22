@@ -16,6 +16,19 @@ This will pull in a number of dependencies, so you may have to wait a few minute
 
 =head2 Environment
 
+In order to build packages with the correct metadata, two environment variables need to be set: C<DEBFULLNAME> and C<DEBEMAIL>. You can set these in your C<~/.bashrc> like so:
+
+=begin programlisting
+
+    export DEBFULLNAME='Paul Waring'
+    export DEBEMAIL='paul@xk7.net'
+
+=end programlisting
+
+For these changes to take effect, start a new terminal or execute C<source ~/.bashrc>.
+
+=head2 Package Creation
+
 Create and enter a temporary directory to build the package in.
 
 =begin programlisting
