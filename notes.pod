@@ -60,7 +60,7 @@ So let's rename the file now:
 =begin programlisting
 
     mv v1.9.2 twig_1.9.2.orig.tar.gz
-    
+
 =end programlisting
 
 Now extract the file, but we must remember to strip the first component of the file path (which will be something like C<fabpot-Twig-75d3d9f>).
@@ -69,7 +69,7 @@ Now extract the file, but we must remember to strip the first component of the f
 
     mkdir twig-1.9.2
     tar --strip-components=1 -xzvf twig_1.9.2.orig.tar.gz -C twig-1.9.2
-    
+
 =end programlisting
 
 Produce directories for the various files.
@@ -80,7 +80,7 @@ Produce directories for the various files.
     mkdir debian
     mkdir debian/source
     cd debian
-    
+
 ==end programlisting
 
 Now we need to create some of the files required. First, let's produce the basic ones which we don't need to change.
@@ -89,7 +89,7 @@ Now we need to create some of the files required. First, let's produce the basic
 
     echo '8' > compat
     echo '3.0 (quilt)' > source/format
-    
+
 ==end programlisting
 
 For the rules file, we are going to cheat slightly and use one which I prepared earlier.
@@ -98,7 +98,7 @@ For the rules file, we are going to cheat slightly and use one which I prepared 
 
     wget http://tinyurl.com/debrules -O rules
     chmod 755 rules
-    
+
 ==end programlisting
 
 Add the following line after the C<dh_installdirs> rule of the C<install> target. Remember to start the line with a tab, as this is a makefile.
