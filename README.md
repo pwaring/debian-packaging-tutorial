@@ -7,4 +7,10 @@ The notes are stored in Plain Old Documentation (POD) format. You can build a PD
 
 If you don't have the pod2pdf binary, it can be installed via the pod2pdf package in Debian and Ubuntu.
 
-Everything in this repository is under the MIT licence, see LICENSE for details.
+If you want to view the slides in LibreOffice, you will need to install the Yanone Kaffeesatz font from the following URL:
+
+http://www.yanone.de/typedesign/kaffeesatz/
+
+It is available under the Open Font Licence.
+
+Everything else in this repository is under the MIT licence, see LICENSE for details.
