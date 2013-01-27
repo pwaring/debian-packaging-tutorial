@@ -231,4 +231,4 @@ An ITP bug alerts other users to the fact that you are intending to package a pa
 
 This step is optional if you are intending to produce a package for private use, e.g. of a closed source web application.
 
-Here's one I prepared earlier: http://bugs.debian.org/645883
+Here's one I prepared earlier: L<http://bugs.debian.org/645883>
