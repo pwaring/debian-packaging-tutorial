@@ -180,7 +180,7 @@ Finally, let's build the package:
 
 =end programlisting
 
-C<-us -uc> means 'do not sign the changes file or the non-existent C<.dsc> file.
+C<-us -uc> means 'do not sign the changes file or the non-existent C<.dsc> file'.
 
 Install the C<.deb> file. Make sure dependencies have been installed first!
 
@@ -227,7 +227,7 @@ Verify that the files and package have been deleted:
 
 =head2 File Intend to Package (ITP) bug
 
-An ITP bug alerts other users to the fact that you are intending to package a particular piece of software, so that others can offer help, mentoring or sponsorship. All bugs of this type are filed against the special wnpp package. You should also check to see whether anyone has already filed an ITP bug for the same package, so that you do not duplicate efforts.
+An ITP bug alerts other users to the fact that you are intending to package a particular piece of software, so that others can offer help, mentoring or sponsorship. All bugs of this type are filed against the special C<wnpp> package. You should also check to see whether anyone has already filed an ITP bug for the same package, so that you do not duplicate efforts. Using the C<reportbug> command will help you find potential duplicate bugs.
 
 This step is optional if you are intending to produce a package for private use, e.g. of a closed source web application.
 
