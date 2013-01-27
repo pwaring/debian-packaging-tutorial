@@ -81,7 +81,7 @@ Produce directories for the various files.
     mkdir debian/source
     cd debian
 
-==end programlisting
+=end programlisting
 
 Now we need to create some of the files required. First, let's produce the basic ones which we don't need to change.
 
@@ -90,7 +90,7 @@ Now we need to create some of the files required. First, let's produce the basic
     echo '8' > compat
     echo '3.0 (quilt)' > source/format
 
-==end programlisting
+=end programlisting
 
 For the rules file, we are going to cheat slightly and use one which I prepared earlier.
 
@@ -99,46 +99,46 @@ For the rules file, we are going to cheat slightly and use one which I prepared 
     wget http://tinyurl.com/debrules -O rules
     chmod 755 rules
 
-==end programlisting
+=end programlisting
 
 Add the following line after the C<dh_installdirs> rule of the C<install> target. Remember to start the line with a tab, as this is a makefile.
 
-==begin programlisting
+=begin programlisting
 
     cp -r lib/Twig debian/twig/usr/share/php/twig/
 
-==end programlist
+=end programlist
 
 Create the C<.dirs> file, which lists all directories created for this package, one per line, and has the same name as the package.
 
-==begin programlisting
+=begin programlisting
 
     touch twig.dirs
 
-==end programlist
+=end programlist
 
 Add the following line - only one directory required for this package.
 
-==begin programlisting
+=begin programlisting
 
     usr/share/php/twig
 
-==end programlist
+=end programlist
 
 Now we need a skeleton changelog file. Change to the parent directory.
 
-==begin programlisting
+=begin programlisting
 
     cd ../
     dch --create
 
-==end programlist
+=end programlist
 
 This will create a file C<debian/changelog> and start an editor process. Make sure you add C<-1> to the version, as this is a Debian-specific requirement.
 
 Open a file C<debian/control> in your favourite editor.
 
-==begin programlisting
+=begin programlisting
 
     Source: twig
     Maintainer: Paul Waring <paul@xk7.net>
@@ -152,7 +152,7 @@ Open a file C<debian/control> in your favourite editor.
     Depends: php5 (>= 5.3), ${misc:Depends}
     Description: PHP template library
 
-==end programlist
+=end programlist
 
 There are some additional lines you can add, such as checksums, homepage etc.
 
@@ -164,66 +164,66 @@ C<Architecture:> If files are the same on all architectures (which is the case f
 
 Now we need to specify the licence.
 
-==begin programlisting
+=begin programlisting
 
     cd debian/
     wget http://tinyurl.com/debcopy -O copyright
 
-==end programlisting
+=end programlisting
 
 Finally, let's build the package:
 
-==begin programlisting
+=begin programlisting
 
     cd ../
     debuild -us -uc
 
-==end programlisting
+=end programlisting
 
 C<-us -uc> means 'do not sign the changes file or the non-existent C<.dsc> file.
 
 Install the C<.deb> file. Make sure dependencies have been installed first!
 
-==begin programlisting
+=begin programlisting
 
     cd ../
     sudo dpkg -i twig_1.9.2-1_all.deb
 
-==end programlisting
+=end programlisting
 
 Head to the installation directory to see if the files are there:
 
-==begin programlisting
+=begin programlisting
 
     cd /usr/share/php/twig
     ls -l
 
-==end programlisting
+=end programlisting
 
 Check the list of installed packages:
 
-==begin programlisting
+=begin programlisting
 
     sudo apt-cache search twig
 
-==end programlisting
+=end programlisting
 
 Remove the package:
 
-==begin programlisting
+=begin programlisting
 
     sudo apt-get purge twig
 
-==end programlisting
+=end programlisting
 
 Verify that the files and package have been deleted:
 
-==begin programlisting
+=begin programlisting
 
     cd /usr/share/php/twig
     sudo apt-cache search twig
 
-==end programlisting
+=end programlisting
 
 =head2 File Intend to Package (ITP) bug
 
