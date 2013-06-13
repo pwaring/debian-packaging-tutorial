@@ -107,7 +107,7 @@ Add the following line after the C<dh_installdirs> rule of the C<install> target
 
     cp -r lib/Twig debian/twig/usr/share/php/twig/
 
-=end programlist
+=end programlisting
 
 Create the C<.dirs> file, which lists all directories created for this package, one per line, and has the same name as the package.
 
@@ -115,7 +115,7 @@ Create the C<.dirs> file, which lists all directories created for this package, 
 
     touch twig.dirs
 
-=end programlist
+=end programlisting
 
 Add the following line - only one directory required for this package.
 
@@ -152,7 +152,7 @@ Open a file C<debian/control> in your favourite editor.
     Depends: php5 (>= 5.3), ${misc:Depends}
     Description: PHP template library
 
-=end programlist
+=end programlisting
 
 There are some additional lines you can add, such as checksums, homepage etc.
 
