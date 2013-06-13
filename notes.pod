@@ -123,7 +123,7 @@ Add the following line - only one directory required for this package.
 
     usr/share/php/twig
 
-=end programlist
+=end programlisting
 
 Now we need a skeleton changelog file. Change to the parent directory.
 
@@ -132,7 +132,7 @@ Now we need a skeleton changelog file. Change to the parent directory.
     cd ../
     dch --create
 
-=end programlist
+=end programlisting
 
 This will create a file C<debian/changelog> and start an editor process. Make sure you add C<-1> to the version, as this is a Debian-specific requirement.
 
