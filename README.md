@@ -1,16 +1,20 @@
 Debian Packaging Tutorial
 =========================
 
-Notes and sample files for Debian Packaging Tutorial, first delivered at ManLUG on 19th January 2013.
+Notes and sample files for Debian Packaging Tutorial, first delivered at [ManLUG](http://www.manlug.org/) on 19th January 2013. If you'd like me to give this talk at a user group or conference, please drop me an email at: paul@xk7.net
 
-The notes are stored in Plain Old Documentation (POD) format. You can build a PDF version by running the build-pdf.sh script which is part of the repository.
+Slides and notes
+----------------
 
-If you don't have the pod2pdf binary, it can be installed via the pod2pdf package in Debian and Ubuntu.
+Slides and notes are available as Markdown source files. You can use [pandoc](http://johnmacfarlane.net/pandoc/) to convert them into various formats (PDF slides are the most reliable).
 
-If you want to view the slides in LibreOffice, you will need to install the Yanone Kaffeesatz font from the following URL:
+Generate slides:
 
-http://www.yanone.de/typedesign/kaffeesatz/
+    pandoc -t beamer slides.md -o slides.pdf
 
-It is available under the Open Font Licence.
+Generate notes:
 
-Everything else in this repository is under the MIT licence, see LICENSE for details.
+    pandoc notes.md -o notes.pdf
+    
+For other formats, substitute the relevant type or file extension as outlined in the pandoc documentation.
+
